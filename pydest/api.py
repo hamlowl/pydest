@@ -348,3 +348,18 @@ class API:
         # /{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/
         url = DESTINY2_URL + '{}/Account/{}/Character/{}/Stats/Activities/?mode={}&count={}&page={}'.format(membership_type, membership_id, character_id, mode, count, page)
         return await self._get_request(url)
+
+    async def get_members_of_group(self, group_id):
+        """Get the list of members in a given group.
+
+        Args:
+            group_id (int):
+                A valid group ID of a clan
+
+        Returns:
+            json (dict)
+        """
+        url = GROUP_URL + '{}/Members/'
+        url = url.format(group_id)
+        return await self._get_request(url)
+        
