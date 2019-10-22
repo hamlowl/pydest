@@ -13,6 +13,7 @@ class BaseTestClass(object):
 
     _membership_id = 4611686018467257491
     _membership_type = 4
+    _group_id = 2880389
 
     @pytest.mark.asyncio
     async def test_is_dict(self, res):
@@ -212,6 +213,6 @@ class TestGetMembersOfGroup(BaseTestClass):
     @pytest.fixture
     async def res(self):
         destiny = pydest.Pydest(api_key)
-        r = await destiny.api.get_members_of_group(self, group_id)
+        r = await destiny.api.get_members_of_group(self._group_id)
         await destiny.close()
         return r
