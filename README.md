@@ -356,6 +356,21 @@ See [Destiny.HistoricalStats.DestinyActivityHistoryResults](https://bungie-net.g
 
 ---
 
+
+> get_members_of_group(groupId)
+
+This function is a coroutine.
+
+Get the list of members in a given group.
+
+**Parameters**
+- `groupId` - A valid group ID of a clan.
+
+**Response**
+See [SearchResultOfGroupMember](https://bungie-net.github.io/multi/schema_SearchResultOfGroupMember.html#schema_SearchResultOfGroupMember)
+
+---
+
 For additional information on how the API endpoints function, refer to the [official documentation](https://bungie-net.github.io/multi/index.html).
 
 ---
